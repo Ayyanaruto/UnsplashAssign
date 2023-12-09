@@ -1,0 +1,126 @@
+:root{
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    --padding:14px
+}
+
+.search-form-container{
+    display: flex;
+    align-items: center;
+    padding: var(--padding);
+    border-radius: 30px;
+    background: #eee;
+    width: 95%;
+    transition: box-shadow 0.25s;
+}
+.search-form-container:focus-within{
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.75);
+}
+.search-form-input{
+    font-size: 16px;
+    font-family:"JetBrainsMono NFM Medium","sans-serif";
+    color:#333;
+    margin-left: var(--padding);
+    outline:none;
+    border: none;
+    background: transparent;
+    flex: 1;
+}
+.search-form-input::placeholder{
+    color: rgba(0,0,0,0.6);
+}
+.search-form-btn:hover{
+    cursor: pointer;
+}
+/*Grid Styling*/
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 20px;
+    align-items: stretch;
+    margin-top: 20px;
+
+
+}
+.grid-image img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+
+
+}
+.grid-card:hover{
+    transform: scale(1.1);
+}
+.grid-card{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    color: #fff;
+    text-transform: uppercase;
+    transition: transform 0.2s ease-in-out;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}
+.grid-content{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #1f3d4738;
+    backdrop-filter: blur(5px);
+    right: -350px;
+    transition: right 1s ease-in;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.grid-content .grid-header{
+    font-size: 25px;
+    font-weight: bolder;
+    text-align: center;
+
+}
+.grid-content-after{
+    right: 0;
+}
+.grid-content p{
+    margin:5px;
+    font-size: 17px;
+    text-align: justify;
+    overflow: hidden;
+    white-space: normal;
+}
+.grid-content a{
+    background: #eee;
+    padding: 5px;
+    border-radius: 5px;
+    color: #333;
+    text-decoration: none;
+    margin: 5px;
+    bottom: 0;
+    font-size: medium;
+
+}
+@media only screen and (max-width: 768px){
+
+    .grid-content {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: none;
+        font-size: 10px;
+
+    }
+   .grid-content p{
+       position: absolute;
+       bottom: 0;
+       font-weight: bolder;
+   }
+
+}
+
