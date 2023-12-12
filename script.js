@@ -31,6 +31,7 @@ const handleSearch=()=> {
 
                     .then(
                         (res) => {
+                            document.querySelector(".grid").innerHTML = "";
                             res.results.map((result) => {
                                 const gridCard = document.createElement("div")
                                 const gridImage = document.createElement("div")
