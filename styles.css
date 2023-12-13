@@ -18,7 +18,7 @@
 }
 .search-form-input{
     font-size: 16px;
-    font-family:"JetBrainsMono NFM Medium","sans-serif";
+    font-family:"Fira Code Retina","sans-serif";
     color:#333;
     margin-left: var(--padding);
     outline:none;
@@ -44,7 +44,7 @@
 }
 .grid-image img{
     width: 100%;
-    height: 400px;
+    height: 500px;
     object-fit: cover;
 
 
@@ -103,6 +103,16 @@
     bottom: 0;
     font-size: medium;
 
+}
+select{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 10px;
+    cursor: pointer;
 }
 @media only screen and (max-width: 768px){
 
